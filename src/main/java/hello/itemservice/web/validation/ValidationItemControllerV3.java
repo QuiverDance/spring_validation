@@ -53,6 +53,11 @@ public class ValidationItemControllerV3 {
             return "validation/v3/addForm";
         }
 
+        /*
+        오브젝트 에러는 여기에 자바 코드로 쓰기
+        (가격 * 수량 >= 10000 제약 조건)
+         */
+        
         //성공 로직
         Item savedItem = itemRepository.save(item);
         redirectAttributes.addAttribute("itemId", savedItem.getId());
